@@ -106,7 +106,7 @@ export default function AboutPage() {
           <m.div variants={item} className="w-full">
             <h2 className="text-3xl font-bold tracking-tight text-center mb-12">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {values.map((value, index) => (
+              {values.map((value) => (
                 <FeatureCard
                   key={value.title}
                   title={value.title}
