@@ -4,8 +4,24 @@ import { Button } from "@/components/ui/button";
 import { m } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 export function Header() {
+  const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const isLinkActive = (path: string) => {
+    return pathname === path;
+  };
+
+  const navItems = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "https://docs.injective.network", label: "Documentation", isExternal: true },
+  ];
+
   return (
     <m.header
       initial={{ y: 25, opacity: 0 }}
@@ -27,35 +43,33 @@ export function Header() {
           </Link>
 
           <div className="flex items-center space-x-6">
+            {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-6">
-              <Link
-                href="#features"
-                className="text-sm text-muted-foreground hover:text-white transition-colors"
-              >
-                Features
-              </Link>
-              <Link
-                href="#demo"
-                className="text-sm text-muted-foreground hover:text-white transition-colors"
-              >
-                Demo
-              </Link>
-              <Link
-                href="#about"
-                className="text-sm text-muted-foreground hover:text-white transition-colors"
-              >
-                About
-              </Link>
+              {navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  target={item.isExternal ? "_blank" : undefined}
+                  rel={item.isExternal ? "noopener noreferrer" : undefined}
+                  className={`text-sm transition-colors ${
+                    isLinkActive(item.href)
+                      ? "text-foreground font-medium"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
             </nav>
 
             <div className="flex items-center space-x-3">
               <Button
                 variant="ghost"
                 size="sm"
-                className="text-muted-foreground hover:text-white"
+                className="text-muted-foreground hover:text-white hidden md:flex"
                 asChild
               >
-                <Link href="https://github.com/your-repo" target="_blank">
+                <Link href="https://github.com/InjectiveLabs" target="_blank">
                   <svg viewBox="0 0 438.549 438.549" className="h-5 w-5" aria-hidden="true">
                     <path
                       fill="currentColor"
@@ -65,36 +79,53 @@ export function Header() {
                   <span className="sr-only">GitHub</span>
                 </Link>
               </Button>
+              <Button size="sm" className="bg-white text-black hover:bg-white/90" asChild>
+                <Link href="https://hub.injective.network/" target="_blank">
+                  Launch App
+                </Link>
+              </Button>
+
+              {/* Mobile Menu Button */}
               <Button
                 variant="ghost"
                 size="sm"
-                className="text-muted-foreground hover:text-white"
-                asChild
+                className="md:hidden"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               >
-                <Link href="https://docs.injective.network" target="_blank">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-5 w-5"
-                    aria-hidden="true"
-                  >
-                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-                  </svg>
-                  <span className="sr-only">Documentation</span>
-                </Link>
-              </Button>
-              <Button size="sm" className="bg-white text-black hover:bg-white/90" asChild>
-                <Link href="#get-started">Login</Link>
+                {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </Button>
             </div>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <m.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute inset-x-4 top-20 rounded-lg bg-black/40 backdrop-blur-xl border border-white/[0.1] p-4 md:hidden"
+          >
+            <nav className="flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  target={item.isExternal ? "_blank" : undefined}
+                  rel={item.isExternal ? "noopener noreferrer" : undefined}
+                  className={`text-sm transition-colors ${
+                    isLinkActive(item.href)
+                      ? "text-foreground font-medium"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </m.div>
+        )}
       </div>
     </m.header>
   );

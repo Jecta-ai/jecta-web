@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { AnimationProvider } from "@/components/providers/animation-provider";
 import { InteractiveBackground } from "@/components/ui/interactive-background";
 import { Footer } from "@/components/layout/footer";
+import { Header } from "@/components/layout/header";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -66,6 +67,7 @@ export default function RootLayout({
       >
         <AnimationProvider>
           <InteractiveBackground />
+          <Header />
           <main className="relative min-h-screen">
             {children}
             <Footer />
