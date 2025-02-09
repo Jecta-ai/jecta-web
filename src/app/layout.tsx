@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { AnimationProvider } from "@/components/providers/animation-provider";
+import { InteractiveBackground } from "@/components/ui/interactive-background";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,7 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
-        <AnimationProvider>{children}</AnimationProvider>
+        <AnimationProvider>
+          <InteractiveBackground />
+          {children}
+        </AnimationProvider>
       </body>
     </html>
   );
