@@ -31,6 +31,7 @@ const features = [
       </svg>
     ),
     variant: "large" as const,
+    animation: "slide" as const,
   },
   {
     title: "Real-Time Execution",
@@ -52,6 +53,7 @@ const features = [
         />
       </svg>
     ),
+    animation: "pulse" as const,
   },
   {
     title: "Ecosystem Integration",
@@ -74,6 +76,7 @@ const features = [
       </svg>
     ),
     variant: "highlight" as const,
+    animation: "slide" as const,
   },
   {
     title: "Advanced Security",
@@ -95,6 +98,7 @@ const features = [
         />
       </svg>
     ),
+    animation: "pulse" as const,
   },
 ];
 
@@ -144,6 +148,7 @@ export function Features() {
                 description={feature.description}
                 icon={feature.icon}
                 variant={feature.variant}
+                animation={feature.animation}
               />
             ))}
           </m.div>

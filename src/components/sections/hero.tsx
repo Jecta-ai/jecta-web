@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { m } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const container = {
   hidden: { opacity: 0 },
@@ -19,6 +20,19 @@ const item = {
   show: { opacity: 1, y: 0 },
 };
 
+const logoAnimation = {
+  hidden: { opacity: 0, scale: 0.8 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 15,
+    },
+  },
+};
+
 export function Hero() {
   return (
     <section className="relative">
@@ -29,6 +43,17 @@ export function Hero() {
           animate="show"
           className="flex flex-col items-center text-center space-y-8"
         >
+          <m.div variants={logoAnimation} className="mb-8">
+            <Image
+              src="/logo.jpeg"
+              alt="Injective Labs Logo"
+              width={100}
+              height={100}
+              className="rounded-lg"
+              priority
+            />
+          </m.div>
+
           <m.div variants={item} className="max-w-3xl space-y-4">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
               Your AI Copilot for{" "}
@@ -67,17 +92,17 @@ export function Hero() {
             </Button>
           </m.div>
 
-          <m.div variants={item} className="pt-8">
+          {/* TODO: Add partner/company logos here */}
+          {/* <m.div variants={item} className="pt-8">
             <div className="rounded-2xl border bg-black/40 backdrop-blur-xl border-white/[0.1] px-6 py-4">
               <p className="text-sm text-muted-foreground">Trusted by developers at</p>
               <div className="mt-3 flex items-center justify-center gap-6">
-                {/* Add partner/company logos here */}
                 <div className="text-muted-foreground/60">Company 1</div>
                 <div className="text-muted-foreground/60">Company 2</div>
                 <div className="text-muted-foreground/60">Company 3</div>
               </div>
             </div>
-          </m.div>
+          </m.div> */}
         </m.div>
       </div>
     </section>

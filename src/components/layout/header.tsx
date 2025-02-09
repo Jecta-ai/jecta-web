@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { m } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Header() {
   return (
@@ -10,12 +11,19 @@ export function Header() {
       initial={{ y: 25, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className="fixed top-0 left-0 right-0 z-50 "
+      className="fixed top-0 left-0 right-0 z-50"
     >
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex h-14 items-center justify-between rounded-lg mt-4 bg-black/40 backdrop-blur-xl border border-white/[0.1] px-4">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-lg font-semibold tracking-tight">Emir</span>
+            <Image
+              src="/logo.jpeg"
+              alt="Injective Labs Logo"
+              width={32}
+              height={32}
+              className="rounded-sm"
+            />
+            <span className="text-lg font-semibold tracking-tight">Injective Labs</span>
           </Link>
 
           <div className="flex items-center space-x-6">
