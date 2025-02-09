@@ -7,10 +7,10 @@ import Link from "next/link";
 export function Header() {
   return (
     <m.header
-      initial={{ y: 15, opacity: 0 }}
+      initial={{ y: 25, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className="fixed top-0 left-0 right-0 z-50"
+      transition={{ duration: 0.3 }}
+      className="fixed top-0 left-0 right-0 z-50 "
     >
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex h-14 items-center justify-between rounded-lg mt-4 bg-black/40 backdrop-blur-xl border border-white/[0.1] px-4">
