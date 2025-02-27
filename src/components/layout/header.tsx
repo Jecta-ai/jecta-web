@@ -11,6 +11,7 @@ import { useState } from "react";
 export function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   const isLinkActive = (path: string) => {
     return pathname === path;
@@ -19,7 +20,7 @@ export function Header() {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    { href: "https://docs.injective.network", label: "Documentation", isExternal: true },
+    { href: "https://jecta.gitbook.io/jecta", label: "Docs", isExternal: true },
   ];
 
   return (
@@ -39,7 +40,7 @@ export function Header() {
               height={32}
               className="rounded-sm"
             />
-            <span className="text-lg font-semibold tracking-tight">Injective Labs</span>
+            <span className="text-lg font-semibold tracking-tight">Jecta</span>
           </Link>
 
           <div className="flex items-center space-x-6">
@@ -69,7 +70,7 @@ export function Header() {
                 className="text-muted-foreground hover:text-white hidden md:flex"
                 asChild
               >
-                <Link href="https://github.com/InjectiveLabs" target="_blank">
+                <Link href="https://github.com/Jecta-ai" target="_blank">
                   <svg viewBox="0 0 438.549 438.549" className="h-5 w-5" aria-hidden="true">
                     <path
                       fill="currentColor"
@@ -79,10 +80,14 @@ export function Header() {
                   <span className="sr-only">GitHub</span>
                 </Link>
               </Button>
-              <Button size="sm" className="bg-white text-black hover:bg-white/90" asChild>
-                <Link href="https://hub.injective.network/" target="_blank">
-                  Launch App
-                </Link>
+              <Button
+                size="sm"
+                className="bg-white text-black w-24 hover:bg-white/90"
+                asChild
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
+              >
+                <span>{hovered ? "Soon" : "Launch App"}</span>
               </Button>
 
               {/* Mobile Menu Button */}

@@ -22,17 +22,17 @@ export const Footer = () => {
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/logo.jpeg"
-              alt="Injective Labs Logo"
+              alt="Jecta"
               width={24}
               height={24}
               className="rounded-sm"
             />
-            <span className="text-sm font-medium text-muted-foreground">Injective Labs</span>
+            <span className="text-sm font-medium text-muted-foreground">Jecta</span>
           </Link>
         </div>
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/Jecta-ai"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground transition-colors hover:text-foreground"
@@ -41,7 +41,7 @@ export const Footer = () => {
             <span className="sr-only">GitHub</span>
           </a>
           <a
-            href="https://twitter.com/yourusername"
+            href="https://twitter.com/jectadotai"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground transition-colors hover:text-foreground"
@@ -50,7 +50,7 @@ export const Footer = () => {
             <span className="sr-only">X (formerly Twitter)</span>
           </a>
           <p className="text-center text-sm text-muted-foreground md:text-left">
-            © {currentYear} Injective Labs. All rights reserved.
+            © {currentYear} Jecta. All rights reserved.
           </p>
         </div>
       </div>

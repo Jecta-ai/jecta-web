@@ -26,21 +26,23 @@ export function Screenshot() {
           />
           <div className="absolute -inset-1 rounded-2xl opacity-40 group-hover:opacity-75 animate-border-width animate-border-color border-2 border-indigo-500/50" />
 
-          {/* Main content */}
-          <div className="relative rounded-2xl border bg-black/40 backdrop-blur-xl border-white/[0.1] aspect-video overflow-hidden">
-            {/* Screenshot */}
-            <Image
-              src="/ss.jpeg"
-              alt="Application Interface Screenshot"
-              fill
-              className="object-cover object-center"
-              priority
-              quality={95}
-            />
+          <div className="relative rounded-2xl border bg-black/40 backdrop-blur-xl border-white/[0.1] overflow-hidden w-fit">
+  {/* Screenshot */}
+  <Image
+    src="/ss.png"
+    alt="Application Interface Screenshot"
+    width={1300}  // Adjust width as needed
+    height={700} // Adjust height as needed
+    className="object-cover"
+    priority
+    quality={95}
+  />
 
-            {/* Glare effect overlay */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none" />
-          </div>
+  {/* Glare effect overlay */}
+  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none" />
+</div>
+
+
         </m.div>
       </div>
     </section>

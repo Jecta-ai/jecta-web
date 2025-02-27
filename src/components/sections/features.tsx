@@ -15,9 +15,9 @@ const container = {
 
 const features = [
   {
-    title: "AI-Powered Intelligence",
+    title: "AI-Powered Intelligence 🖥️",
     description:
-      "Experience the future of smart contract development with advanced AI models that understand your code, suggest improvements, and help prevent vulnerabilities.",
+      "Experience the power of cutting-edge AI with Jecta! Unlock the latest and greatest models, including DeepSeek-R1 and many more. Supercharge your agent with top-tier LLMs and accomplish tasks effortlessly with just a single prompt. Let Jecta handle the magic for you!",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -34,9 +34,9 @@ const features = [
     animation: "slide" as const,
   },
   {
-    title: "Real-Time Execution",
+    title: "Real-Time Execution ⚡",
     description:
-      "Deploy and execute smart contracts with confidence using our lightning-fast infrastructure and real-time monitoring system.",
+      "Execute smart contracts and tasks instantly with zero delays, because speed matters. Get things done as soon as you confirm your actions take effect in real time ! ",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -56,9 +56,9 @@ const features = [
     animation: "pulse" as const,
   },
   {
-    title: "Ecosystem Integration",
+    title: "Ecosystem Integration 🔗",
     description:
-      "Seamlessly connect with the entire Injective ecosystem. Our platform ensures perfect compatibility and smooth interactions across all protocols.",
+      "Jecta will be designed to integrate effortlessly with nearly all dApps, explorer, Injective Hub and much more, creating a fully interconnected experience on Injective. No more jumping between platforms. Jecta brings everything together in one unified AI-powered hub, allowing you to interact with the entire Injective ecosystem seamlessly. Whether you're managing smart contracts, tracking transactions, exploring blockchain data, Jecta ensures real-time synchronization for maximum efficiency. As the ecosystem expands, so does Jecta. Continuously evolving to support the latest integrations and innovations. Stay connected, stay ahead. Jecta has you covered! ",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -79,9 +79,9 @@ const features = [
     animation: "slide" as const,
   },
   {
-    title: "Advanced Security",
+    title: "Advanced Security 🔒",
     description:
-      "Built-in security features protect your contracts from common vulnerabilities, with automated auditing and real-time threat detection.",
+      "Easily confirm your smart contract executions and other tasks with Jecta—your control, your rules! Jecta ensures that nothing happens without your explicit confirmation. Stay secure and in charge every step of the way!",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -117,11 +117,11 @@ export function Features() {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
             Powerful Features for{" "}
             <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Smart Contract Development
+              AI Assisted Actions
             </span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Experience the next generation of blockchain development with our comprehensive suite of
+            Experience the next generation of blockchain actions with Jecta's comprehensive suite of
             tools and features.
           </p>
         </m.div>

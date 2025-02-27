@@ -56,23 +56,22 @@ export function Hero() {
 
           <m.div variants={item} className="max-w-3xl space-y-4">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-              Your AI Copilot for{" "}
+              First open-source AI copilot on{" "}
               <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Injective Protocol
+                Injective
               </span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Build, deploy, and manage smart contracts on Injective with AI-powered assistance. Get
-              intelligent code suggestions, automated testing, and real-time debugging support.
+              Meet Jecta. Your on-chain AI assistant for the best experience on Injective.
             </p>
           </m.div>
 
           <m.div variants={item} className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" asChild>
-              <Link href="#get-started">Get Started</Link>
+              <Link href="https://jecta.gitbook.io/jecta/v0.0.2/jecta-v0.0.2">v0.0.2</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link href="#demo">
+              <Link href="https://github.com/Jecta-ai">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -87,7 +86,7 @@ export function Hero() {
                   <circle cx="12" cy="12" r="10" />
                   <polygon points="10 8 16 12 10 16 10 8" />
                 </svg>
-                Watch Demo
+                Github
               </Link>
             </Button>
           </m.div>

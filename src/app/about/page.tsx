@@ -23,20 +23,20 @@ const item = {
 const values = [
   {
     title: "Innovation",
-    description: "Pushing the boundaries of what's possible in blockchain technology and DeFi.",
+    description: "Pushing the boundaries of what's possible in AI and DeFi.",
     icon: <Lightbulb className="w-6 h-6 text-indigo-400" />,
     animation: "pulse" as const,
   },
 
   {
     title: "Community",
-    description: "Building and nurturing a strong, engaged community of developers and users.",
+    description: "Building and nurturing a strong, engaged community of developers and users with open-source structures.",
     icon: <Users className="w-6 h-6 text-pink-400" />,
     animation: "pulse" as const,
   },
   {
     title: "Security",
-    description: "Maintaining the highest standards of security in all our applications.",
+    description: "Maintaining the highest standards of security in our applications.",
     icon: <Shield className="w-6 h-6 text-purple-400" />,
     animation: "pulse" as const,
   },
@@ -57,12 +57,11 @@ export default function AboutPage() {
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6">
               About{" "}
               <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Injective Labs
+                Jecta
               </span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Building the future of decentralized finance through innovative blockchain solutions
-              and cutting-edge technology.
+              Building the first open-source future of DefAI on Injective Blockchain.
             </p>
           </m.div>
 
@@ -71,30 +70,28 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="text-3xl font-bold tracking-tight">Our Mission</h2>
               <p className="text-lg text-muted-foreground">
-                At Injective Labs, we&apos;re on a mission to create a more inclusive and efficient
-                financial system through blockchain technology. We believe in a future where
-                financial services are accessible to everyone, everywhere.
+              Jecta is built to seamlessly integrate with the entire Injective ecosystem, delivering the best user experience possible. Our goal is to create an AI that can handle every task you perform on Injective. Executing smart contracts, querying any data, and analyzing everything with ease. No more manual effort or switching between platforms. Jecta brings automation, intelligence, and real-time execution to your workflow. As development continues, Jecta will evolve to become the go-to AI assistant for all things Injective, empowering users to navigate the blockchain effortlessly. 🚀✨
               </p>
               <ul className="space-y-4 text-muted-foreground">
                 <li className="flex items-center gap-3">
                   <div className="h-2 w-2 rounded-full bg-indigo-500" />
-                  <span>Building decentralized financial infrastructure</span>
+                  <span>Jecta will automate everything on Injective.</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="h-2 w-2 rounded-full bg-purple-500" />
-                  <span>Empowering developers with powerful tools</span>
+                  <span>Execute, query, and analyze with ease.</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="h-2 w-2 rounded-full bg-pink-500" />
-                  <span>Fostering innovation in blockchain technology</span>
+                  <span>Fully open-source structure, transparent to everyone.</span>
                 </li>
               </ul>
             </div>
-            <div className="relative aspect-square w-full max-w-md mx-auto">
+            <div className="relative aspect-square w-full max-w-md mx-auto ">
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-20 blur-2xl" />
               <Image
                 src="/logo.jpeg"
-                alt="Injective Labs"
+                alt="Jecta"
                 fill
                 className="object-contain p-8"
                 priority
